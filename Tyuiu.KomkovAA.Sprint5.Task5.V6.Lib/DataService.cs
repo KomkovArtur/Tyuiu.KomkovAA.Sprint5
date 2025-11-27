@@ -18,8 +18,12 @@ namespace Tyuiu.KomkovAA.Sprint5.Task5.V6.Lib
                     array = line.Split(" ");
                     for (int i = 0; i < array.Length; i++)
                     {
-                        res = res + Convert.ToDouble(array[i]);
-                        count++;
+                        if (array[i].Contains(","))
+                        {
+                            res = res + Convert.ToDouble(array[i]);
+                            count++;
+                        }
+                        
                     }
 
                 }
