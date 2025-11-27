@@ -18,13 +18,13 @@ namespace Tyuiu.KomkovAA.Sprint5.Task5.V6.Lib
                     array = line.Split(" ");
                     for (int i = 0; i < array.Length; i++)
                     {
-                        res = res + Math.Round(Convert.ToDouble(array[i]), 3);
+                        res = res + Convert.ToDouble(array[i]);
                         count++;
                     }
 
                 }
             }
-            return res / count;
+            return Math.Round(res / count, 3);
 
         }
     }
