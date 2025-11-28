@@ -14,7 +14,7 @@ namespace Tyuiu.KomkovAA.Sprint5.Task7.V30.Lib
                 a += "9";
             }
             else {a += text[0]; }
-                for (int i = 0; i < text.Length - 1; i++)
+                for (int i = 1; i < text.Length - 1; i++)
                 {
                     if (Char.IsDigit(text[i]) && !Char.IsDigit(text[i + 1]) & !Char.IsDigit(text[i - 1]))
                     {
