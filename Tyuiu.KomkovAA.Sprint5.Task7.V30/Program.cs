@@ -1,4 +1,5 @@
 ﻿using System.IO;
+using System.Runtime.Serialization.Json;
 using Tyuiu.KomkovAA.Sprint5.Task7.V30;
 using Tyuiu.KomkovAA.Sprint5.Task7.V30.Lib;
 using static System.Net.Mime.MediaTypeNames;
@@ -28,9 +29,12 @@ internal class Program
         Console.WriteLine("***************************************************************************");
         Console.WriteLine("* РЕЗУЛЬТАТ:                                                              *");
         Console.WriteLine("***************************************************************************");
-
         string res = ds.LoadDataAndSave(path);
         Console.WriteLine(res);
+        Console.WriteLine("СОХРАНЕН В: \"C:\\Users\\Артур\\AppData\\Local\\Temp\\OutPutFileTask7.txt\\");
+
+
+
 
 
     }

@@ -8,7 +8,7 @@ namespace Tyuiu.KomkovAA.Sprint5.Task7.V30.Test
         [TestMethod]
         public void TestMethod1()
         {
-            string path = Path.Combine(Path.GetTempPath(), "OutPutFileTask2.csv");
+            string path = Path.Combine(Path.GetTempPath(), "OutPutFileTask7.csv");
             FileInfo fileInfo = new FileInfo(path);
             bool fileExsist = fileInfo.Exists;
             if (fileExsist)

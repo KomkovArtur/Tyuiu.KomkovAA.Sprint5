@@ -7,6 +7,15 @@ namespace Tyuiu.KomkovAA.Sprint5.Task7.V30.Lib
     {
         public string LoadDataAndSave(string path)
         {
+            string txt = Path.Combine(Convert.ToString(Path.GetTempPath()), "OutPutFileTask7.txt");
+            FileInfo fileInfo = new FileInfo(txt);
+            bool fileExists = fileInfo.Exists;
+
+            if (fileExists)
+            {
+                File.Delete(txt);
+
+            } 
             string a = "";
             string text = File.ReadAllText(path);
             if (Char.IsDigit(text[0]) && !Char.IsDigit(text[1]))
@@ -29,7 +38,7 @@ namespace Tyuiu.KomkovAA.Sprint5.Task7.V30.Lib
                 a += "9";
             }
             else { a += text[text.Length - 1]; }
-            string txt = Path.Combine(Path.GetTempPath(), "OutPutDataFileTask7V30.txt."); ;
+            File.AppendAllText(txt, $"{a}");
             return a;
         }
     }
